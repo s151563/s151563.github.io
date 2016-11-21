@@ -1,0 +1,1 @@
+[Das ist meine Präsentation über: math_numer_string_array_objectAPIs](https://htmlpreview.github.io/?https://github.com/s151563/Bankdienstleitung/blob/master/Pr%C3%A4sentationen/AlvaroZ%20-%20math_numer_string_array_objectAPIs/index.html#/)

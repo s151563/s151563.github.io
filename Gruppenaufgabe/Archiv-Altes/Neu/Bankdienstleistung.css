@@ -1,0 +1,83 @@
+nav {
+        float: left;
+        font: bold 20px Arial, sans-serif;
+        border: 2px solid black;
+        border-top: 2px solid black;
+        overflow: hidden;
+}
+nav ul {
+        margin:0;
+        padding:0;
+        list-style:none;
+}
+nav ul li {
+        float:left;
+}
+nav ul li a {
+        float: left;
+        color:#fff;
+        padding: 10px 20px;
+        text-decoration:none;
+        background:#F00;
+        border-left: 1px solid rgba(255, 255, 255, 0.05);
+        border-right: 1px solid rgba(0,0,0,0.2);
+}
+nav li ul {
+        background:#fff;
+        left: -999em;
+        margin: 40px 0 0;
+        position: absolute;
+        width: 160px;
+        z-index: 9999;
+        border: 1px solid rgba(0, 0, 0, 0.5);
+}
+nav li ul a {
+        background: #fff;
+        border: 0 none;
+        margin-right: 0;
+        width: 120px;
+        border-bottom: 1px solid transparent;
+        border-top: 1px solid transparent;
+}
+
+nav ul li ul li a{
+    color:black;
+    
+    
+
+    
+    
+}
+/*2. Ebene anzeigen und stylen*/
+nav ul li a:hover,
+nav ul li:hover > a {
+        background:#fff;
+        color:#F00;
+}
+nav li ul a:hover, 
+nav ul li li:hover > a  {
+        background: #333;
+        border-bottom: 1px solid rgba(0,0,0,0.6);
+        border-top: 1px solid #000;
+}
+/*3. Ebene anzeigen und stylen*/
+nav li:hover ul {
+        left: auto;
+}
+nav li li ul {
+        margin: -1px 0 0 160px;
+        visibility:hidden;
+}
+nav li li:hover ul {
+        visibility:visible;
+}
+
+
+
+/* Kreis*/
+
+.Kunde1{width:100px;height:100px;border-radius:50px;font-size:20px;color:#fff;line-height:100px;text-align:center;background:#000}
+
+.Kunde1.two{display:none}.Kunde1:hover
+.one{display:none}.Kunde1:hover
+.two{display:inline}

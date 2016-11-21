@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 210px;
+    background-color: white;
+    height: 100%;
+    overflow: auto;
+    font: bold 20px Arial, sans-serif;
+    
+}
+
+li a {
+    display: block;
+    color: #000;
+    padding: 10% 7% ;
+    text-decoration: none;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 270px
+    
+}
+ul li a{
+    color: black;
+}
+
+li a:hover:not(.active) {
+    background-color: #F00;
+    color: white;
+}
+nav ul ul {
+	display: none;
+}
+
+nav ul li:hover > ul {
+	display: inline-block;
+
+}
+
+
+div{     
+   
+    display: inline-table;
+}
+
+
+p{
+ 
+   font: bold 20px Arial, sans-serif; 
+}

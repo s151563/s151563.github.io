@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="Bankdienstleistung_v2.css" />        
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script type="text/javascript" src="base64.js"></script>
+        <script type="text/javascript" src="Bankdienstleistung.js"></script>
+    </head>
+
+    <body>
+        <script> // Initialisierung der globalen Variablen  
+            var Rechnungen = {Platzhalter: "Initial"};
+            var Kunden;
+            var KundeAktiv = "";
+            DatenEinlesen();
+            DatenSpeichern();
+        </script>
+        
+        <header>       
+                <div class = "td2">
+                    <div class="tr1"> <!--Logo-->
+                        <p id ="logo"><img src="Logo%20(2).jpg" onclick = "location.reload()"> </p>
+                    </div>
+                    <div class="tr1"> <!--Datum-->
+                        <p id ="datum">
+                            <script type="text/javascript">  
+                            var date = getDate();
+                            document.write("Heute ist: "+date);     
+                            </script>
+                        </p>
+                    </div>
+                    <div class="tr1"> <!--Anmeldemeldung-->                           
+                        <p id ="Eingeloggt">
+                            Nicht eingeloggt. Bitte einloggen!
+                            <script type="text/javascript">//loginAfter();</script>
+                        </p>
+                    </div>
+                </div>
+                <div class = "td1"> <!--Login-->      
+                    <center>
+                            <h1>Login</h1>
+                            <div>Benutzername:</div>
+                            <input id="username" />
+                            <p><button id = "LoginButton" class = "button2" onclick="login()">Login</button></p>
+                    </center>
+                </div>
+        </header>
+        
+        <div id=Layout>
+            <div class="table"><!--Tabelle für die Oberfläche-->
+                <div class = "td"><!--Feld Nr.1-->
+                    <div id= "mainMen" ></div>
+                    <div id= "mainHizu"></div>
+                </div>
+                <div class = "td"><!--Feld Nr.2-->
+                    <div id = "Ebene1"></div> 
+                </div>
+                <div class = "td"><!--Feld Nr.3-->
+                    <div id = "Ebene2"></div>
+                </div>
+            </div>
+        </div> 
+    </body>
+</html>

@@ -1,0 +1,1 @@
+[Praesi(https://htmlpreview.github.io/?https://github.com/s151563/Bankdienstleitung/blob/master/FranzJ%20-%20ES6%20Klassen/ES6classes/index.html#/)]

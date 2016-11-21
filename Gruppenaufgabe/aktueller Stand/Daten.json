@@ -1,0 +1,28 @@
+{
+"Rechnungen": [
+{
+    "Beispielrechnung": {
+        "ID": 0, "Steller": "Kunde1", "Empfaenger": "Kunde2", "Betrag": "100", "Datum": "0.0.0"
+    },
+    "Rechnung1": {
+        "ID": 1, "Steller": "Kunde1", "Empfaenger": "Kunde2", "Betrag": "100", "Datum": "0.0.0"
+    },
+    "Rechnung2": {
+        "ID": 2, "Steller": "Kunde1", "Empfaenger": "Kunde2", "Betrag": "150", "Datum": "0.0.0"
+    },
+    "Rechnung3": {
+        "ID": 3, "Steller": "Kunde2", "Empfaenger": "Kunde3", "Betrag": "100", "Datum": "0.0.0"
+    },
+    "Rechnung4": {
+        "ID": 4, "Steller": "Kunde3", "Empfaenger": "Kunde1", "Betrag": "100", "Datum": "0.0.0"
+    }
+}
+],
+"Kunden": [
+    {
+    "Kunde1": {"Name" : "Schweer", "Vorname" : "Jonah", "IBAN":"DE00000000000000000003"},
+    "Kunde2": {"Name" : "Schreiner", "Vorname" : "Philipp", "IBAN":"DE00000000000000000001"},
+    "Kunde3": {"Name" : "Zorn", "Vorname" : "Alvaro", "IBAN":"DE00000000000000000002"}
+    }
+]
+}

@@ -1,0 +1,99 @@
+<!DOCTYP html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Kamera</title>
+</head>
+<body>
+    <div id="promoNode"></div>
+
+	<p>Benutzen Sie Opera Next oder Chrome Canary, um ein Bild aufnehmen zu können!</p>
+
+	<!--
+        Die Elemente werden nur erzeugt, wenn der Browser und das Gerät die Kameranutzung unterstützen.
+	-->
+	<video id="video" width="640" height="480" autoplay></video>
+	<button id="snap" class="sexyButton">Bild aufnehmen</button>
+	<canvas id="canvas" width="640" height="480"></canvas>
+
+	<script>
+
+		// EventListener für das Video
+		window.addEventListener("DOMContentLoaded", function() {
+			// Videoeinstellungen und Video erzeugen
+            var canvas = document.getElementById('canvas');
+            var context = canvas.getContext('2d');
+            var video = document.getElementById('video');
+            var mediaConfig =  { video: true };
+            var errBack = function(e) {
+            	console.log('Ein Fehler ist aufgetreten.!', e)
+            };
+
+			// Videofunktion ansteuern
+            if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+                navigator.mediaDevices.getUserMedia(mediaConfig).then(function(stream) {
+                    video.src = window.URL.createObjectURL(stream);
+                    video.play();
+                });
+            }
+
+            
+            else if(navigator.getUserMedia) { // Standard
+				navigator.getUserMedia(mediaConfig, function(stream) {
+					video.src = stream;
+					video.play();
+				}, errBack);
+			} else if(navigator.webkitGetUserMedia) { // WebKit-prefixed
+				navigator.webkitGetUserMedia(mediaConfig, function(stream){
+					video.src = window.webkitURL.createObjectURL(stream);
+					video.play();
+				}, errBack);
+			} else if(navigator.mozGetUserMedia) { // Mozilla-prefixed
+				navigator.mozGetUserMedia(mediaConfig, function(stream){
+					video.src = window.URL.createObjectURL(stream);
+					video.play();
+				}, errBack);
+			}
+
+			// Foto erstellen
+			document.getElementById('snap').addEventListener('click', function() {
+				context.drawImage(video, 0, 0, 640, 480);
+
+            });
+        }, false);
+
+
+	</script>
+    
+<div id="speicher"></div>
+
+    <script>
+bild = document.getElementById('canvas');
+imgData = getBase64Image(bild);
+localStorage.setItem("imgData", imgData);
+    
+function getBase64Image(img) {
+var canvas = document.createElement("canvas");
+canvas.width = img.width;
+canvas.height = img.height;
+
+var ctx = canvas.getContext("2d");
+ctx.drawImage(img, 0, 0, 640, 480);
+
+var dataURL = canvas.toDataURL("image/png");
+
+return dataURL.replace(/^data:image\/(png|jpg);base64,/, "");
+}
+    </script>
+    
+<img src="" id="Foto" />
+    
+<script>   
+var dataImage = localStorage.getItem('imgData');
+bannerImg = document.getElementById('Foto');
+bannerImg.src = "data:image/png;base64," + dataImage;
+</script>
+    
+</div>
+</body>
+</html>

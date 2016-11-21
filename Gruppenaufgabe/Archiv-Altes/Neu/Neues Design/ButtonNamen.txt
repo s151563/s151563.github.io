@@ -1,0 +1,20 @@
+Wichtig: vorhandenes Script am Anfang löschen und neues Script (siehe utnen) ganz am Ende des Bodys direkt vor </body> einfügen!
+
+
+
+
+    <script>
+            function start() {
+            //Hier werden die initialKunden angelegt
+            var Kunden = {"Kunde1" : {Name : "Name1", Vorname : "Vorname1", IBAN:"DE00000000000000000000"},"Kunde2": {Name : "Name2", Vorname : "Vorname2", IBAN:"DE00000000000000000001"} ,"Kunde3": {Name : "Name3", Vorname : "Vorname3", IBAN:"DE00000000000000000002"}};
+            //TODO: Buttons aus dieser Liste befüllen
+            var Rechnungen = {"Beispielrechnung": {Steller: "Kunde1", Empaenger: "Kunde2", Betrag: "100"}};
+            var KundeAktiv = "";
+            for (var i = 1; i < (Object.keys(Kunden).length+1); i++) {
+                var nameT = "Kunde" + i;
+                document.getElementById(nameT).innerHTML = Kunden[nameT].Name;
+            }
+            
+            }
+            window.onload = start();
+    </script>

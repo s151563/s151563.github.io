@@ -1,0 +1,128 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+				<section><b>Externe Abhängigkeiten (npm / bower)</b><br/><br/>Kevin Neuendorf<br/>WWI15AMB</section>
+                <section>
+                    <section><b>WHAT?</b></section>
+                    <section><b><p class="fragment highlight-green">Was?</p></b><p class="fragment fade-up">Npm - Node Package Manager<br/><img class"plain" src="Npm.png"><br/><br/>Bower - A package manager for the web<br/><img class"plain" src="Bower.png"></p></section>
+                    <section><b>Npm: </b>Paketmanager für JS-Laufzeitumgebung node.js<br/><b>Bower: </b>Paketverwaltung für clientseitige JS-Pakete<p class="fragment fade-up"><img class"plain" src="Trend.PNG" width="800px"></p></section>
+                </section>
+                <section>
+                    <section><b>WHY?</b></section>
+                    <section><b><p class="fragment highlight-green">Warum?</p></b><p class="fragment fade-up">Use npm to install, share, and distribute code; manage dependencies in your projects; share & receive feedback.<br/>→ Npm hat über 240.000 Pakete (Stand 03.16)<br/><br/>Web sites are made of lots of things — frameworks, libraries, assets, and utilities. Bower manages all these things for you.<br/>→ Bower hat fast 130.000 Pakete (Stand 03.15)</p></section>   
+                </section>
+                <section>
+                    <section><b>HOW?</b></section>
+                    <section><b><p class="fragment highlight-green">Wie?</p></b><p class="fragment fade-up">Ein Projekt aufsetzen<br/><img class"plain" src="Projekt_aufsetzen.PNG" width="550px"></section>
+                    <section>↓<br/>Nach Paketen suchen<br/><img class"plain" src="Pakete_suchen.PNG"></section>
+                    <section>↓<br/>Neue Pakete installieren<br/><img class"plain" src="Paket_installieren.PNG" width="400px"><br/>↓<br/><img class"plain" src="Paket_ordner.png" width="450px"></p></section> 
+                </section>
+                <section><b>Bower und npm lassen Abhängigkeiten sowohl für die Produktion, als auch für die Entwicklung spezifizieren. Bower wird für Frontend-Pakete verwendet und npm für Pakete zur Entwicklung.</b></section>
+                <section>Vielen Dank für Ihre Aufmerksamkeit!</section>
+            </div>
+        </div>
+		<script src="js/reveal.js"></script>
+        <script>
+            Reveal.initialize({
+                
+    // Display controls in the bottom right corner
+    controls: false,
+
+    // Display a presentation progress bar
+    progress: true,
+
+    // Display the page number of the current slide
+    slideNumber: true,
+
+    // Push each slide change to the browser history
+    history: true,
+
+    // Enable keyboard shortcuts for navigation
+    keyboard: true,
+
+    // Enable the slide overview mode
+    overview: true,
+
+    // Vertical centering of slides
+    center: false,
+
+    // Enables touch navigation on devices with touch input
+    touch: true,
+
+    // Loop the presentation
+    loop: false,
+
+    // Change the presentation direction to be RTL
+    rtl: false,
+
+    // Randomizes the order of slides each time the presentation loads
+    shuffle: false,
+
+    // Turns fragments on and off globally
+    fragments: true,
+
+    // Flags if the presentation is running in an embedded mode,
+    // i.e. contained within a limited portion of the screen
+    embedded: false,
+
+    // Flags if we should show a help overlay when the questionmark
+    // key is pressed
+    help: true,
+
+    // Flags if speaker notes should be visible to all viewers
+    showNotes: false,
+
+    // Number of milliseconds between automatically proceeding to the
+    // next slide, disabled when set to 0, this value can be overwritten
+    // by using a data-autoslide attribute on your slides
+    autoSlide: 0,
+
+    // Stop auto-sliding after user input
+    autoSlideStoppable: true,
+
+    // Use this method for navigation when auto-sliding
+    autoSlideMethod: Reveal.navigateNext,
+
+    // Enable slide navigation via mouse wheel
+    mouseWheel: false,
+
+    // Hides the address bar on mobile devices
+    hideAddressBar: true,
+
+    // Opens links in an iframe preview overlay
+    previewLinks: false,
+
+    // Transition style
+    transition: 'convex', // none/fade/slide/convex/concave/zoom
+
+    // Transition speed
+    transitionSpeed: 'default', // default/fast/slow
+
+    // Transition style for full page slide backgrounds
+    backgroundTransition: 'convex', // none/fade/slide/convex/concave/zoom
+
+    // Number of slides away from the current that are visible
+    viewDistance: 3,
+
+    // Parallax background image
+    parallaxBackgroundImage: '', // e.g. "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'"
+
+    // Parallax background size
+    parallaxBackgroundSize: '', // CSS syntax, e.g. "2100px 900px"
+
+    // Number of pixels to move the parallax background per slide
+    // - Calculated automatically unless specified
+    // - Set to 0 to disable movement along an axis
+    parallaxBackgroundHorizontal: null,
+    parallaxBackgroundVertical: null
+    });;
+        </script>
+    </body>
+</html>

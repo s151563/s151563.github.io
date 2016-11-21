@@ -1,0 +1,240 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Meine Präsentation: Alvaro Zorn</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+            
+            
+        
+            function mathPI(){
+                var x = Math.PI;
+                var y = Math.cos(20);    
+                document.getElementById("ausgabe").innerHTML = "COS von: "+ y +" und PI ist: "+x;
+            }
+
+            function number(){
+
+                var x = Number.MAX_VALUE;
+
+               document.getElementById("ausgabe1").innerHTML = "MAX_VALUE: "+ x;
+            }
+
+
+            function length(){
+
+                var x = 'Mannheim';
+
+                document.getElementById("ausgabe2").innerHTML = "Länge von Mannheim: "+ x.length;
+            }
+            
+            function from(){
+                var x = Array.from("Programmieren");     
+                
+                 document.getElementById("ausgabe3").innerHTML = "Programmieren zerteilt in ein Array: "+ Array.from("Programmieren");
+                
+                
+            }
+            
+            function of(){
+                
+                var x = Array.of(1, 2, 3, 4);
+                
+                document.getElementById("ausgabe4").innerHTML = "Es wurde ein Array erzeugt: "+ x;
+                
+                
+            }
+        
+            function copy(){
+                var x = ["alpha", "bravo", "charlie", "delta"].copyWithin(2, 0);
+
+                document.getElementById("ausgabe5").innerHTML = "'alpha' und 'bravo' wurden auf 'charlie' und 'delta' kopiert: " + x;
+                
+            }
+            
+             function API(){
+                var obj = { a: 1 };
+                var copy = Object.assign({}, obj);
+                var objnew = console.log(copy);
+                 
+             }
+            
+        
+       
+        </script>
+     
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+                    <p>Präsentation über:</p>
+                    <h3>math + number + string + array + Object APIs</h3>
+                    <p>Von: Alvaro Zorn</p>
+                </section> 
+                
+                <section>
+                    <h2>Math.* </h2>
+                    
+                    <pre><code>
+//Eigenschaften und Methoden 
+//für mathematische Konstanten und Funktionen
+var x = Math.cos(20);  
+
+var y = Math.PI;
+                    </code></pre>
+                  
+                    <textarea id="ausgabe" style="width: 800px; height: 60px; font-family: arial, san-serif;  font-size: 26px;"></textarea>
+ 
+                    <button onClick="mathPI();" type="button" style =" display:inline-table;border: none;border-radius: 16px;text-align: center;font-size: 28px;padding: 20px;width: 200px; transition: all 0.5s; cursor: pointer;    margin: 5px;">Click Me!</button>
+                    <br>
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math"> Weitere Informationen</a>
+
+                </section>
+                
+                <section>
+                    <h2>Number.*</h2>
+                    
+                    <pre><code>
+//Erlaubt das Arbeiten mit numerischen Werten 
+var x = Number.MAX_VALUE;
+                    </code></pre>
+                  
+                    <textarea id="ausgabe1" style="width: 800px; height: 60px; font-family: arial, san-serif;  font-size: 26px;"></textarea>
+
+                    <button onClick="number();" type="button" style =" display:inline-table;border: none;border-radius: 16px;text-align: center;font-size: 28px;padding: 20px;width: 200px; transition: all 0.5s; cursor: pointer;    margin: 5px;">Click Me!</button>
+                    <br>
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number"> Weitere Informationen</a>
+                
+                </section>
+             
+                <section>
+                    <h2>String</h2>
+           
+                    <pre><code>
+//Funktionen zum Arbeiten mit Strings
+ var x = 'Mannheim';
+
+ document.getElementById("ausgabe").value = x.length;
+                    </code></pre>
+                    
+                    
+                    <textarea id="ausgabe2" style="width: 800px; height: 60px; font-family: arial, san-serif;  font-size: 26px;"></textarea>
+
+                    <button onClick="length();" type="button" style =" display:inline-table;border: none;border-radius: 16px;text-align: center;font-size: 28px;padding: 20px;width: 200px; transition: all 0.5s; cursor: pointer;    margin: 5px;">Click Me!</button>
+                    <br>
+                    <a href="https://wiki.selfhtml.org/wiki/JavaScript/Objekte/String "> Weitere Informationen</a>
+                
+                </section>
+         
+				<section>
+                    <h2>Array.from()</h2>
+                
+                    <pre><code>
+//Erstellung eine neue Array Instanz von einem Objekt
+var x = Array.from("Programmieren");                      
+                    </code></pre>
+
+                    <textarea id="ausgabe3" style="width: 800px; height: 60px; font-family: arial, san-serif;  font-size: 26px;"></textarea>
+
+                    <button onClick="from();" type="button" style =" display:inline-table;border: none;border-radius: 16px;text-align: center;font-size: 28px;padding: 20px;width: 200px; transition: all 0.5s; cursor: pointer;    margin: 5px;">Click Me!</button>
+                    <br>
+                    <a href="https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Array/from"> Weitere Informationen</a>
+
+                </section>
+              
+                <section>
+                    <h2>Array.of()</h2>
+                    
+                    <pre><code>
+//Erstellt eine neue Instanz eines Arrays 
+//mit einer variablen Anzahl an Argumenten
+var x = Array.of(1, 2, 3, 4);                  
+                    </code></pre>
+
+                    <textarea id="ausgabe4" style="width: 800px; height: 60px; font-family: arial, san-serif;  font-size: 26px;"></textarea>
+
+                    <button onClick="of();" type="button" style =" display:inline-table;border: none;border-radius: 16px;text-align: center;font-size: 28px;padding: 20px;width: 200px; transition: all 0.5s; cursor: pointer;    margin: 5px;">Click Me!</button>
+                    <br>
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/of"> Weitere Informationen</a>
+                </section>
+                
+                <section>
+                    <h2>Array.prototype.copyWithin()</h2>
+                    
+         
+                    <pre><code>
+//Kopiert einen Teil eines Arrays 
+//in eine andere Stelle des gleichen Array
+var x = ["alpha", "bravo", "charlie", "delta"].copyWithin(2, 0);  
+                    </code></pre>
+
+                    <textarea id="ausgabe5" style="width: 800px; height: 65px; font-family: arial, san-serif;  font-size: 26px;"></textarea>
+
+                    <button onClick="copy();" type="button" style =" display:inline-table;border: none;border-radius: 16px;text-align: center;font-size: 28px;padding: 20px;width: 200px; transition: all 0.5s; cursor: pointer;    margin: 5px;">Click Me!</button>
+                    <br>
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/copyWithin"> Weitere Informationen</a>
+                </section>
+                
+                <section>
+                    <h2>Object.assign</h2>
+                    
+                    
+                    <pre><code>
+//kopiert die Werte aus einem oder 
+//mehreren Quellobjekten in ein Zielobjekt
+var obj = { a: 1 };
+var copy = Object.assign({}, obj);
+
+var objnew = console.log(copy);
+                 
+                    </code></pre>
+
+            
+                    <button onClick="API();" type="button" style =" display:inline-table;border: none;border-radius: 16px;text-align: center;font-size: 28px;padding: 20px;width: 200px; transition: all 0.5s; cursor: pointer;    margin: 5px;">Click Me!</button>
+                    <br>
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign"> Weitere Informationen</a>
+                </section>
+                
+                <section>
+                    <h1>Viele Dank für eure Aufmerksamkeit</h1>
+                </section>
+                
+             
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
