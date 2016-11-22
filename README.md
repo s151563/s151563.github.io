@@ -63,7 +63,7 @@ Das Video ist leider zu groß und aus unerklärlichen Gründen kann man es nicht
 
 <video width="320" height="240" controls>
   		<source src="https://github.com/s151563/s151563.github.io/blob/master/Pr%C3%A4sentationen/JonahS%20-%20DeviceAPIs/Video.mp4" type="video/mp4">
-  		Your browser does not support the video tag.
+
 </video>
 
   
