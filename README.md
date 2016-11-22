@@ -62,7 +62,7 @@ Die Seite wird aus unerklärlichen Gründen nicht korrekt angezeigt über die Gi
 Das Video ist leider zu groß und aus unerklärlichen Gründen kann man es nicht öffnen. Das Original liegt im Ordner Gruppenaufgabe und kann durch einen Download über die dazugehörige Video.html geöffnet werden. Der Link "Video" führt zu Youtube.
 
 <video width="320" height="240" controls>
-  		<source src="projectv.1.mp4" type="video/mp4">
+  		<source src="https://www.youtube.com/watch?v=8qy68gZNTKg&feature=youtu.be" type="video/webm">
   		Your browser does not support the video tag.
 </video>
 
